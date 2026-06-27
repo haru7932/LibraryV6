@@ -1404,7 +1404,7 @@ function redzlib:SetScale(NewScale)
 end
 
 function redzlib:MakeWindow(Configs)
-	local WIcon = Configs[1] or Configs.Icon or Configs.Logo
+	local WIcon = Configs[1] or Configs.Icon
 	local WTitle = Configs[2] or Configs.Name or Configs.Title or "redz Library V5"
 	local WMiniText = Configs[3] or Configs.SubTitle or "by : redz9999"
 	
@@ -1458,8 +1458,7 @@ function redzlib:MakeWindow(Configs)
 		Position = UDim2.new(0, 8, 0.5),
 		AnchorPoint = Vector2.new(0, 0.5),
 		Image = WIcon,
-		BackgroundTransparency = 0
-		BackgroundColor3 = Theme["Color Hub 2"]
+		BackgroundTransparency = 1
 	})	
 	
 	local Title = InsertTheme(Create("TextLabel", TopBar, {
