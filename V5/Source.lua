@@ -1446,7 +1446,7 @@ function redzlib:MakeWindow(Configs)
 	})
 	
 	local TopBar = Create("Frame", Components, {
-		Size = UDim2.new(1, 0, 0, 28),
+		Size = UDim2.new(1, 0, 0, 35),
 		BackgroundTransparency = 1,
 		Name = "Top Bar"
 	})
@@ -1607,7 +1607,7 @@ function redzlib:MakeWindow(Configs)
 			SaveSize = MainFrame.Size
 			ControlSize1.Visible = false
 			ControlSize2.Visible = false
-			CreateTween({MainFrame, "Size", UDim2.fromOffset(MainFrame.Size.X.Offset, 28), 0.25, true})
+			CreateTween({MainFrame, "Size", UDim2.fromOffset(MainFrame.Size.X.Offset, 35), 0.25, true})
 			Minimized = true
 		end
 		
