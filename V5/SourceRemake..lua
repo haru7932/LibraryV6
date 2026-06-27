@@ -1453,7 +1453,7 @@ function redzlib:MakeWindow(Configs)
 		Name = "Top Bar"
 	})
 
-	local Icon = InsertTheme(Create("ImageLabel", TopBar, {
+	local Icon = Create("ImageLabel", TopBar, {
 		Size = UDim2.new(0, 18, 0, 18),
 		Position = UDim2.new(0, 10, 0.5),
 		AnchorPoint = Vector2.new(0, 0.5),
