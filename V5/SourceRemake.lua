@@ -1430,7 +1430,7 @@ function redzlib:MakeWindow(Configs)
 		Size = UDim2.fromOffset(UISizeX, UISizeY),
 		Position = UDim2.new(0.5, -UISizeX/2, 0.5, -UISizeY/2),
         BackgroundColor3 = Color3.fromRGB(100, 100, 100), 
-		BackgroundTransparency = 0.15,
+		BackgroundTransparency = 0,
 		Name = "Hub"
 	}), "Main")
 	Make("Gradient", MainFrame, {
