@@ -1404,11 +1404,10 @@ function redzlib:SetScale(NewScale)
 end
 
 function redzlib:MakeWindow(Configs)
-	local WIcon = Configs[1] or Configs.Icon
-	local WTitle = Configs[2] or Configs.Name or Configs.Title or "redz Library V5"
-	local WMiniText = Configs[3] or Configs.SubTitle or "by : redz9999"
+	local WTitle = Configs[1] or Configs.Name or Configs.Title or "redz Library V5"
+	local WMiniText = Configs[2] or Configs.SubTitle or "by : redz9999"
 	
-	Settings.ScriptFile = Configs[4] or Configs.SaveFolder or false
+	Settings.ScriptFile = Configs[3] or Configs.SaveFolder or false
 	
 	local function LoadFile()
 		local File = Settings.ScriptFile
@@ -1430,7 +1429,8 @@ function redzlib:MakeWindow(Configs)
 	local MainFrame = InsertTheme(Create("ImageButton", ScreenGui, {
 		Size = UDim2.fromOffset(UISizeX, UISizeY),
 		Position = UDim2.new(0.5, -UISizeX/2, 0.5, -UISizeY/2),
-		BackgroundTransparency = 0.03,
+        BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+		BackgroundTransparency = 0.15,
 		Name = "Hub"
 	}), "Main")
 	Make("Gradient", MainFrame, {
@@ -1455,9 +1455,9 @@ function redzlib:MakeWindow(Configs)
 
 	local Icon = InsertTheme(Create("ImageLabel", TopBar, {
 		Size = UDim2.new(0, 18, 0, 18),
-		Position = UDim2.new(0, 8, 0.5),
+		Position = UDim2.new(0, 10, 0.5),
 		AnchorPoint = Vector2.new(0, 0.5),
-		Image = WIcon,
+		Image = "rbxassetid://10734896206",
 		BackgroundTransparency = 1
 	})	
 	
