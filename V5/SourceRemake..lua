@@ -1452,14 +1452,6 @@ function redzlib:MakeWindow(Configs)
 		BackgroundTransparency = 1,
 		Name = "Top Bar"
 	})
-
-	local Icon = Create("ImageLabel", TopBar, {
-		Size = UDim2.new(0, 18, 0, 18),
-		Position = UDim2.new(0, 10, 0.5),
-		AnchorPoint = Vector2.new(0, 0.5),
-		Image = "rbxassetid://10734896206",
-		BackgroundTransparency = 1
-	})	
 	
 	local Title = InsertTheme(Create("TextLabel", TopBar, {
 		Position = UDim2.new(0, 15, 0.5),
