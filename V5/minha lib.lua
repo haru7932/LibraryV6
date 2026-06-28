@@ -23,7 +23,6 @@ local redzlib = {
 			["Color Theme"] = Color3.fromRGB(30, 90, 70),
 			["Color Text"] = Color3.fromRGB(150, 180, 170),
 			["Color Dark Text"] = Color3.fromRGB(220, 240, 230)
-		},
 		Dark = {
 			["Color Hub 1"] = ColorSequence.new({
 				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(40, 40, 40)),
@@ -1252,7 +1251,7 @@ end)
 
 local function ButtonFrame(Instance, Title, Description, HolderSize)
 	local TitleL = InsertTheme(Create("TextLabel", {
-		Font = Enum.Font.FredrokaOne,
+		Font = Enum.Font.FredokaOne,
 		TextColor3 = Theme["Color Text"],
 		Size = UDim2.new(1, -20),
 		AutomaticSize = "Y",
@@ -1267,7 +1266,7 @@ local function ButtonFrame(Instance, Title, Description, HolderSize)
 	}), "Text")
 	
 	local DescL = InsertTheme(Create("TextLabel", {
-		Font = Enum.Font.Arial,
+		Font = Enum.Font.Gotham,
 		TextColor3 = Theme["Color Dark Text"],
 		Size = UDim2.new(1, -20),
 		AutomaticSize = "Y",
@@ -1428,7 +1427,7 @@ function redzlib:MakeWindow(Configs)
 	local MainFrame = InsertTheme(Create("ImageButton", ScreenGui, {
 		Size = UDim2.fromOffset(UISizeX, UISizeY),
 		Position = UDim2.new(0.5, -UISizeX/2, 0.5, -UISizeY/2),
-		BackgroundTransparency = 0.03,
+		BackgroundTransparency = 1,
 		Name = "Hub"
 	}), "Main")
 	Make("Gradient", MainFrame, {
@@ -1441,7 +1440,7 @@ function redzlib:MakeWindow(Configs)
         Position = UDim2.new(0, 0, 0, 0),
         BackgroundTransparency = 1,
         Image = "rbxassetid://138241673975488", 
-        ImageTransparency = 0.03,
+        ImageTransparency = 0.1,
         ScaleType = Enum.ScaleType.Crop,
         ZIndex = 0
     })
@@ -1457,7 +1456,7 @@ function redzlib:MakeWindow(Configs)
 	})
 	
 	local TopBar = Create("Frame", Components, {
-		Size = UDim2.new(1, 0, 0, 35),
+		Size = UDim2.new(1, 0, 0, 24),
 		BackgroundTransparency = 1,
 		Name = "Top Bar"
 	})
@@ -1485,7 +1484,7 @@ function redzlib:MakeWindow(Configs)
 			TextXAlignment = "Left",
 			TextYAlignment = "Bottom",
 			TextSize = 8,
-			Font = Enum.Font.Arial,
+			Font = Enum.Font.Gotham,
 			Name = "SubTitle"
 		}), "DarkText")
 	}), "Text")
@@ -1618,7 +1617,7 @@ function redzlib:MakeWindow(Configs)
 			SaveSize = MainFrame.Size
 			ControlSize1.Visible = false
 			ControlSize2.Visible = false
-			CreateTween({MainFrame, "Size", UDim2.fromOffset(MainFrame.Size.X.Offset, 35), 0.25, true})
+			CreateTween({MainFrame, "Size", UDim2.fromOffset(MainFrame.Size.X.Offset, 24), 0.25, true})
 			Minimized = true
 		end
 		
@@ -1680,7 +1679,7 @@ function redzlib:MakeWindow(Configs)
 			AnchorPoint = Vector2.new(0.5, 0.5)
 		}, {
 			InsertTheme(Create("TextLabel", {
-				Font = Enum.Font.ArialBold,
+				Font = Enum.Font.GothamBold,
 				Size = UDim2.new(1, 0, 0, 20),
 				Text = DTitle,
 				TextXAlignment = "Left",
@@ -1743,7 +1742,7 @@ function redzlib:MakeWindow(Configs)
 			Make("Corner", Button)
 			SetProps(Button, {
 				Text = Name,
-				Font = Enum.Font.ArialBold,
+				Font = Enum.Font.GothamBold,
 				TextColor3 = Theme["Color Text"],
 				TextSize = 12
 			})
@@ -1812,6 +1811,7 @@ function redzlib:MakeWindow(Configs)
 			Size = UDim2.new(0, 13, 0, 13),
 			AnchorPoint = Vector2.new(0, 0.5),
 			Image = TIcon or "",
+            ImageColor3 = Theme["Color Text"],
 			BackgroundTransparency = 1,
 			ImageTransparency = (FirstTab and 0.3) or 0
 		}), "Text")
@@ -1972,7 +1972,7 @@ function redzlib:MakeWindow(Configs)
 				Position = UDim2.new(1, -10, 0.5),
 				AnchorPoint = Vector2.new(1, 0.5),
 				BackgroundTransparency = 1,
-				Image = "rbxassetid://10734934585"
+				Image = "rbxassetid://10709791437"
 			})
 			
 			FButton.Activated:Connect(function()
@@ -2093,7 +2093,7 @@ function redzlib:MakeWindow(Configs)
 				AnchorPoint = Vector2.new(0.5, 0.5),
 				Position = UDim2.new(0.5, 0, 0.5, 0),
 				BackgroundTransparency = 1,
-				Font = Enum.Font.ArialBold,
+				Font = Enum.Font.GothamBold,
 				TextScaled = true,
 				TextColor3 = Theme["Color Text"],
 				Text = "..."
@@ -2313,7 +2313,7 @@ function redzlib:MakeWindow(Configs)
 						Position = UDim2.new(0, 10),
 						Text = Name,
 						TextColor3 = Theme["Color Text"],
-						Font = Enum.Font.ArialBold,
+						Font = Enum.Font.GothamBold,
 						TextXAlignment = "Left",
 						BackgroundTransparency = 1,
 						TextTransparency = 0.4
@@ -2574,7 +2574,7 @@ function redzlib:MakeWindow(Configs)
 				AnchorPoint = Vector2.new(0.5, 0.5),
 				Position = UDim2.new(0.5, 0, 0.5, 0),
 				BackgroundTransparency = 1,
-				Font = Enum.Font.ArialBold,
+				Font = Enum.Font.GothamBold,
 				TextScaled = true,
 				TextColor3 = Theme["Color Text"],
 				ClearTextOnFocus = TClearText,
@@ -2667,7 +2667,7 @@ function redzlib:MakeWindow(Configs)
 				Position = UDim2.new(0, 44, 0, 22),
 				TextWrapped = "Y",
 				AutomaticSize = "Y",
-				Font = Enum.Font.Arial,
+				Font = Enum.Font.Gotham,
 				TextColor3 = Theme["Color Dark Text"],
 				TextXAlignment = "Left",
 				BackgroundTransparency = 1,
