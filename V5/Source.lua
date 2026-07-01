@@ -26,14 +26,14 @@ local redzlib = {
 		},
 		Dark = {
 			["Color Hub 1"] = ColorSequence.new({
-				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(40, 40, 40)),
-				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(47.5, 47.5, 47.5)),
-				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(40, 40, 40))
+				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)),
+				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(0, 0, 0)),
+				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))
 			}),
-			["Color Hub 2"] = Color3.fromRGB(45, 45, 45),
-			["Color Stroke"] = Color3.fromRGB(65, 65, 65),
-			["Color Theme"] = Color3.fromRGB(65, 150, 255),
-			["Color Text"] = Color3.fromRGB(245, 245, 245),
+			["Color Hub 2"] = Color3.fromRGB(0, 0, 0),
+			["Color Stroke"] = Color3.fromRGB(50, 50, 60),
+			["Color Theme"] = Color3.fromRGB(255, 255, 255),
+			["Color Text"] = Color3.fromRGB(255, 255, 255),
 			["Color Dark Text"] = Color3.fromRGB(190, 190, 190)
 		},
 		Purple = {
@@ -55,7 +55,7 @@ local redzlib = {
 	Save = {
 		UISize = {550, 380},
 		TabSize = 160,
-		Theme = "Darker"
+		Theme = "Dark"
 	},
 	Settings = {},
 	Connection = {},
@@ -1428,7 +1428,7 @@ function redzlib:MakeWindow(Configs)
 	local MainFrame = InsertTheme(Create("ImageButton", ScreenGui, {
 		Size = UDim2.fromOffset(UISizeX, UISizeY),
 		Position = UDim2.new(0.5, -UISizeX/2, 0.5, -UISizeY/2),
-		BackgroundTransparency = 0.03,
+		BackgroundTransparency = 0,
 		Name = "Hub"
 	}), "Main")
 	Make("Gradient", MainFrame, {
@@ -2671,8 +2671,8 @@ function redzlib:MakeWindow(Configs)
 				Text = "Join",
 				Font = Enum.Font.GothamBold,
 				TextSize = 12,
-				TextColor3 = Color3.fromRGB(220, 220, 220),
-				BackgroundColor3 = Color3.fromRGB(50, 150, 50)
+				TextColor3 = Color3.fromRGB(255, 255, 255),
+				BackgroundColor3 = Color3.fromRGB(50, 50, 50)
 			})Make("Corner", JoinButton, UDim.new(0, 5))
 			
 			local ClickDelay
@@ -2683,13 +2683,13 @@ function redzlib:MakeWindow(Configs)
 				ClickDelay = true
 				SetProps(JoinButton, {
 					Text = "Copied to Clipboard",
-					BackgroundColor3 = Color3.fromRGB(100, 100, 100),
-					TextColor3 = Color3.fromRGB(150, 150, 150)
+					BackgroundColor3 = Color3.fromRGB(50, 50, 50),
+					TextColor3 = Color3.fromRGB(255, 255, 255)
 				})task.wait(5)
 				SetProps(JoinButton, {
 					Text = "Join",
-					BackgroundColor3 = Color3.fromRGB(50, 150, 50),
-					TextColor3 = Color3.fromRGB(220, 220, 220)
+					BackgroundColor3 = Color3.fromRGB(50, 50, 50),
+					TextColor3 = Color3.fromRGB(255, 255, 256)
 				})ClickDelay = false
 			end)
 			
